@@ -1,0 +1,71 @@
+-----------------------
+
+Installing postgresql on local system and configuring it to listen and accept request via tcp remote connection.
+Refer below webpage:
+https://ubuntu.com/server/docs/databases-postgresql
+
+-----------------------
+
+COMMAND LINE INTERFACE USAGE FOR POSTGRESQL:
+To use the \l command, connect to the Postgres database server using the psql command-line interface. Once you are connected, type \l and press Enter. This will display a list of all databases on the server.
+Use \list or \l+ to get more information
+
+Alternatively, you can use the \list or \l+ command to list databases in Postgres. These commands will provide additional information about each database, such as the size of the database and the date it was created.
+Listing databases you have access to
+
+To list only the databases that you have access to, you can use the \du command. This command will show a list of all roles (including databases) and the privileges that each role has.
+View more detailed information for a database
+
+If you want to see more detailed information about a specific database, you can use the \db command followed by the name of the database. This will display information about the tables, functions, and other objects in the database.
+Also available in the system catalog
+
+In addition to using the command-line interface, you can also list databases in Postgres using the pg_catalog.pg_database system catalog. This catalog contains a row for each database in the system, and you can query it to retrieve information about the databases.
+
+For example, the following query will list all databases in Postgres:
+
+SELECT datname FROM pg_catalog.pg_database;
+
+This query will return a list of database names. You can then use this information to access the databases and perform other operations on them.
+Just point and click with Beekeeper Studio
+
+In summary, to list databases in Postgres, you can use the \l, \list, or \l+ commands in the psql command-line interface, or you can query the pg_catalog.pg_database system catalog. These methods will provide you with a list of databases on the server, along with information about each database.
+
+----------------------
+
+pgAdmin installation
+
+#
+# Setup the repository
+#
+
+# Install the public key for the repository (if not done previously):
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+
+# Create the repository configuration file:
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+#
+# Install pgAdmin
+#
+
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
+
+# Install for web mode only: 
+sudo apt install pgadmin4-web 
+
+# Configure the webserver, if you installed pgadmin4-web:
+sudo /usr/pgadmin4/bin/setup-web.sh
+
+email id: trialact01@gmail.com
+password: triact01
+
+----------------------
+
+localhost server connection
+
+user - postgres
+pwd - postgres
