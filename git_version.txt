@@ -1,0 +1,27 @@
+1. creating a git repository on github.com
+
+2. initialize git on local system
+git init
+git add .
+git commit -m "local system hosting-connection"
+git remote add origin "git-repo-link"
+ssaral and github token required for authentication
+
+3. git pull origin main
+to pull the current files and bring your local git to 'main' branch state
+
+4. to add from local system to github 
+git add file-name
+git status #to check
+git commit -m "commit-message"
+
+5. Merging via command line
+If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.
+Step 1: Clone the repository or update your local repository with the latest changes.
+git pull origin main
+Step 2: Switch to the base branch of the pull request.
+git checkout main
+Step 3: Merge the head branch into the base branch.
+git merge master
+Step 4: Push the changes.
+git push -u origin main
