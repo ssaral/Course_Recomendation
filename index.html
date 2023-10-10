@@ -11,7 +11,7 @@
 
 <style>
 	#desc 
-	{  background-image: url("bgimage.jpg")  ;  color: white;  padding: 20px;  text-align: center; border-radius: 25px;} 
+	{  background-image: url('{{ url_for('static', filename='images/bgimage.jpg') }}');  color: white;  padding: 20px;  text-align: center; border-radius: 25px;} 
 	.row 
 	{  display: flex; }
 	.column 
@@ -19,7 +19,7 @@
 	.desp-detail 
 	{  text-align: center; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); background-color: rgba(255, 255, 255, 0.5); top: 50%; left: 50%; color: black; padding: 20px; border-radius: 20px; }
 	.center 
-	{ background-image:url("bgimage2.jpg"); background-repeat: no-repeat; background-size: cover; 
+	{ background-image: url('{{ url_for('static', filename='images/bgimage2.jpg') }}'); background-repeat: no-repeat; background-size: cover; 
 	  background-color: lightgrey; text-align: center; padding: 40; background-position: bottom center;  
 	}
 	footer 
@@ -27,7 +27,7 @@
 	/* .rocket-text { text-align: left; position: absolute; top: 55%; left: 50%; transform: translate( -50%, -50%); color: white; } */
 	body
 	{ font-family: 'Poppins', sans-serif; 
-	/* Location of the image */ background-image: url("rocket.jpg"); 
+	/* Location of the image */ background-image: url('{{ url_for('static', filename='images/rocket.jpg') }}'); 
 	/* Background image is centered vertically and horizontally at all times */ background-position: center center; 
 	/* Background image doesn’t tile */ background-repeat: no-repeat; 
 	/* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */ background-attachment: fixed; 
@@ -46,7 +46,7 @@
         }
 
         .login-header {
-            background-image: url("bgimage.jpg"); /*background-color: #007BFF; */
+            background-image: url('{{ url_for('static', filename='images/bgimage.jpg') }}'); /*background-color: #007BFF; */
             color: #fff;
             padding: 20px 0;
         }
@@ -127,8 +127,10 @@
 				<div class="login-header">
 				    <h1>Login</h1>
 				</div>
-				<form class="login-form">
+				<form class="login-form" method="POST" action="/auth">
+				    <label for="username">Username:</label>
 				    <input class="login-input" type="text" placeholder="Username" required>
+				    <label for="password">Password:</label>
 				    <input class="login-input" type="password" placeholder="Password" required>
 				    <button class="login-button" type="submit">Login</button>
 				</form>
