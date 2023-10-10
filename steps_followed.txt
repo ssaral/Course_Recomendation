@@ -1,0 +1,9 @@
+postgresql installed
+database setup
+index page desgined
+flask and psycopg2 installed
+->pip install psycopg2-binary
+->sudo apt-get install libpq-dev
+->pip install psycopg2
+->pip install Flask
+coding model.py for login interface connection with postgresql
