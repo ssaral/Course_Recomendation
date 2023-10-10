@@ -6,89 +6,149 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
+
 <style>
-	#desc {  background-color:  #FFFDD0;  color: black;  padding: 30px;  text-align: left;} 
-	#myimage { float:right; width:auto; height:180px; object-fit:contain; }
-	#myvideo { width:1150px; }
-	#contact-me { background-color: lightgrey }
-	.center {  text-align: center; padding: 40; }
-	ul { list-style-type: none;   margin: 0;   padding: 15;  overflow: hidden;  background-color: white; }
-	li { float: left;}
-	li a { color: black;  text-align: center;  padding: 14px 16px;  text-decoration: none;}
-	li a:hover {  color: green; background-color: white; }
-	li a:active { color: green; }
-	img { border-radius: 8px; }
-	body { background-color: white }
+	#desc 
+	{  background-image: url("bgimage.jpg")  ;  color: white;  padding: 20px;  text-align: center; border-radius: 25px;} 
+	.row 
+	{  display: flex; }
+	.column 
+	{  flex: 50%;  padding: 50px;/*  background-color: white;*/ }        
+	.desp-detail 
+	{  text-align: center; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); background-color: rgba(255, 255, 255, 0.5); top: 50%; left: 50%; color: black; padding: 20px; border-radius: 20px; }
+	.center 
+	{ background-image:url("bgimage2.jpg"); background-repeat: no-repeat; background-size: cover; 
+	  background-color: lightgrey; text-align: center; padding: 40; background-position: bottom center;  
+	}
+	footer 
+	{  text-align: center; padding: 3px; }
+	/* .rocket-text { text-align: left; position: absolute; top: 55%; left: 50%; transform: translate( -50%, -50%); color: white; } */
+	body
+	{ font-family: 'Poppins', sans-serif; 
+	/* Location of the image */ background-image: url("rocket.jpg"); 
+	/* Background image is centered vertically and horizontally at all times */ background-position: center center; 
+	/* Background image doesn’t tile */ background-repeat: no-repeat; 
+	/* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */ background-attachment: fixed; 
+	/* This is what makes the background image rescale based on the container’s size */ background-size: cover; 
+	/* Set a background color that will be displayed while the background image is loading */ background-color: #464646; 
+	}
+
+	.login-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .login-header {
+            background-image: url("bgimage.jpg"); /*background-color: #007BFF; */
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .login-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .login-form {
+            padding: 20px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: 2px solid #007BFF;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .login-input:focus {
+            border-bottom-color: #0056b3;
+        }
+
+        .login-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-options {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .login-options a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .login-options a:hover {
+            text-decoration: underline;
+        }
+        
+	/* #left-partition { float:left; width:1000px; height:auto; object-fit:contain; } */
+	
+	#a-footer:link { color: blue; }
+	#a-footer:visited { color: #bc3195; }
+	#a-footer:hover { color: white; }
+	#a-footer:active { color: blue; text-decoration: underline; }
+	
 </style>
+</head>
 
 <body>
-
-	<div id="bar"></div>
-	<nav class="navbar fixed-top header">
-		<div class="container" id="navigation">
-		<img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xy5gpotEJYc8YDRlKzK-Ew2HiQPM8skAn8YowHui7E1OXKjC7cMYsxLvVDi6jLj9zndi6f8_lkHiqbRoYL9HUNKsZW6Q=s1600" width=auto height="80px" class="logo" id=iitb_logo alt="IITB_logo" style="margin:right" align="right"/>
-		<ul id="navigation_ul">
-			<li><a class="active" href="#home">Home</a></li>
-			<li><a href="projects.html">Project</a></li>
-			<li><a href="hobbies.html">Hobbies</a></li>
-			<li><a href="education.html">Education</a></li>
-			<li><a href="feedback.html">Feedback</a></li>
-		</ul>
-		</div>
-	</nav>
-
-
-<main>
-	<br><br><br><br> 
-	<section>           
-		<div class="center">
-			<p> <h2> Holla. I'm Saral Sureka. </h2> </p>
-		</div>
-	</section>
-	<section>
-		<div class="container">
-		<div class="row"> 			<div class="col-md-12">
-		<p id="desc" align="justify" style="font-size: 16;" >  
-		<img id="myimage" src="https://lh3.googleusercontent.com/drive-viewer/AITFw-wp8DIp8CE-V8pTTPqg75cN2ok595gtKDoFAbO83HC5KZUNQWKvAHcKyX1KIn443oNeMtfYw3E3NR6LgI3Z1P-kxA2Uyg=s2560" title="Saral_Sureka">
-		I am currently pursuing my masters from <a target="_blank" href="http://www.iitb.ac.in/">Indian Institute of Technology Bombay</a> in Intelligent Systems(Computer Science and Engineering Department). I'm enrolled in MS programme as RAP (Research Assistant) student working in ML of Netowrk Security projects with Prof. Ganesh Ramakrishnan. I have completed my Bachelor's degree in Computer science from University of Pune with 9.41 CGPA. During my bachelor's I have worked on multiple projects based on programming languages such as C/C++, Python, bash, Database language, Java. Also, I have hands-on experience working in the domain of IoT technology integrated with OpenCV module. Post my bachelor's I joined corporate world as an API developer and also aquired the opportuniy to work as a Devops Engineer. If you want to connect with me or to know descriptive information about my work, kindly visit my social handles on the website below. :: or if you are visiting IIT Bombay, ping me on insta and we will meet for a beverage.  
-		</p>
-		</div>
-		</div>
-	</section>
-	<hr>
-	<section>
-		<div class="container">
-		<div class="row">
-		<div class="col-md-12">
-		<h3> The Beauty of technology </h3>
-		<br>
-		<video id="myvideo" src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zmFQOE6anDu4FTiu-D6-yBwAopedIYTZ5h8P-3o4S9KaDC-LsrJ5rvehaH-9oIezz4ncAHRnGDuEJDEp-0rPWLGEK0hQ=s1600" controls>video</video>
-		</div>
-		</div></div>
-	</section>
-	<hr>
-</main>
-	<footer>
-		<div id="contact-me">
-		<div class = "center">Saral Sureka
-		<!-- div class="left" style="width:30%">&#169; Saral Sureka</div--> 
-		<!-- div class="right" style="width:60%" -->
-		<nav class="right">  <!-- YE NAV FUNCTIONALITY KE SATH EXPERIMENT KARNA PADEGA -->
-			<a  target="_blank" href="https://www.instagram.com/">Instagram</a>&nbsp;&nbsp; | &nbsp;
-			<a  target="_blank" href="https://www.linkedin.com/in/saralsureka">LinkedIn</a>&nbsp;&nbsp; | &nbsp;
-			<a  target="_blank" href="https://github.com/ssaral">GitHub</a>
-		</nav>
-		</div>
-		</div>
-	</footer>	
+	<div class="container"><br> <p id="desc"; style="font-size: 40;" > Course Recommendation </p> </div>
+	<br><hr>
+	<div class="row">
+		<div class="column">
+			<div class="desp-detail">
+				<h3>The Course Recommendation Webpage is a user-friendly online platform that aims to simplify the process of finding and selecting educational courses or programs tailored to individual needs and aspirations. Whether you are a student exploring new academic opportunities, a professional seeking to enhance your skills, or a lifelong learner pursuing personal enrichment, our webpage offers a wealth of features and benefits to help you discover the perfect learning experiences.
+	  			</h3>
+	  		</div>
+		</div> 
+		<div class="column"; align="center">
+			<div class="login-container">
+				<div class="login-header">
+				    <h1>Login</h1>
+				</div>
+				<form class="login-form">
+				    <input class="login-input" type="text" placeholder="Username" required>
+				    <input class="login-input" type="password" placeholder="Password" required>
+				    <button class="login-button" type="submit">Login</button>
+				</form>
+				<div class="login-options">
+				    <p>Don't have an account? <a href="#">Sign up</a></p>
+				    <p><a href="#">Forgot password?</a></p>
+				</div>
+			</div>
+		</div> 
+	</div>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<div class = "center"; style="color:white; font-size:20px">Important Links:
+	<footer><b>
+		<a class="active" href="#home" id="a-footer">Home</a>&nbsp;&nbsp; | &nbsp;
+		<a href="#" id="a-footer" >xyz</a>&nbsp;&nbsp; | &nbsp;
+		<a href="#" id="a-footer" >About</a>&nbsp;&nbsp; | &nbsp;
+		<a href="#" id="a-footer" >abc</a>&nbsp;&nbsp; | &nbsp;
+		<a href="#" id="a-footer" >Feedback</a>&nbsp;&nbsp;
+	</b></footer>
+	</div>
 </body>
 </html>
-
-
-<!--
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">	
--->		
-
