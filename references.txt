@@ -2,3 +2,4 @@ References Links :
 
 https://www.w3schools.com/howto/howto_css_form_on_image.asp
 https://www.w3schools.com/css/css_image_gallery.asp
+https://www.w3schools.com/howto/howto_js_alert.asp
