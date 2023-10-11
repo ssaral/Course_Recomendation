@@ -19,11 +19,11 @@
 	.desp-detail 
 	{  text-align: center; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); background-color: rgba(255, 255, 255, 0.5); top: 50%; left: 50%; color: black; padding: 20px; border-radius: 20px; }
 	.center 
-	{ background-image: url('{{ url_for('static', filename='images/bgimage2.jpg') }}'); background-repeat: no-repeat; background-size: cover; 
-	  background-color: lightgrey; text-align: center; padding: 40; background-position: bottom center;  
+	{ background-image: url('{{ url_for('static', filename='images/footerimage.jpeg') }}'); background-repeat: no-repeat; background-size: cover; 
+	  background-color: lightgrey;  text-align: center; padding: 20; background-position: bottom center; margin-top:220px;	
 	}
 	footer 
-	{  text-align: center; padding: 3px; }
+	{ /* background-image: url('{{ url_for('static', filename='images/footerimage.jpeg') }}');*/ text-align: center; padding: 3px;}
 	/* .rocket-text { text-align: left; position: absolute; top: 55%; left: 50%; transform: translate( -50%, -50%); color: white; } */
 	body
 	{ font-family: 'Poppins', sans-serif; 
@@ -104,9 +104,9 @@
         
 	/* #left-partition { float:left; width:1000px; height:auto; object-fit:contain; } */
 	
-	#a-footer:link { color: blue; }
-	#a-footer:visited { color: #bc3195; }
-	#a-footer:hover { color: white; }
+	#a-footer:link { color: white; }
+	#a-footer:visited { color: black; }
+	#a-footer:hover { color: yellow; }
 	#a-footer:active { color: blue; text-decoration: underline; }
 	
 </style>
@@ -129,30 +129,30 @@
 				</div>
 				<form class="login-form" method="POST" action="/auth">
 					<div class="form-group">
-				    <label for="username">Username:</label>
+				    <!-- <label for="username">Username:</label> -->
 				    <input class="login-input" type="text" id="username" name="username" placeholder="Username" required></div>
-				    <label for="password">Password:</label>
+				    <!-- <label for="username">Password:</label> -->
 				    <div class="form-group">
 				    <input class="login-input" type="password" id="password" name="password" placeholder="Password" required> </div>
 				    <button class="login-button" type="submit">Login</button>
 				</form>
 				<div class="login-options">
-				    <p>Don't have an account? <a href="#">Sign up</a></p>
-				    <p><a href="#">Forgot password?</a></p>
+				    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+				    <p><a href="/under-construction">Forgot password?</a></p>
 				</div>
 			</div>
 		</div> 
 	</div>
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
-	<div class = "center"; style="color:white; font-size:20px">Important Links:
+
+	<div class = "center"; style="color:white; font-size:20px;" >Links:
 	<footer><b>
 		<a class="active" href="#home" id="a-footer">Home</a>&nbsp;&nbsp; | &nbsp;
-		<a href="#" id="a-footer" >xyz</a>&nbsp;&nbsp; | &nbsp;
-		<a href="#" id="a-footer" >About</a>&nbsp;&nbsp; | &nbsp;
-		<a href="#" id="a-footer" >abc</a>&nbsp;&nbsp; | &nbsp;
-		<a href="#" id="a-footer" >Feedback</a>&nbsp;&nbsp;
+		<a href="/under-construction" id="a-footer" >xyz</a>&nbsp;&nbsp; | &nbsp;
+		<a href="/under-construction" id="a-footer" >About</a>&nbsp;&nbsp; | &nbsp;
+		<a href="/under-construction" id="a-footer" >abc</a>&nbsp;&nbsp; | &nbsp;
+		<a href="/under-construction" id="a-footer" >Feedback</a>&nbsp;&nbsp;
 	</b></footer>
+	Check if without background color looks better?
 	</div>
 </body>
 </html>

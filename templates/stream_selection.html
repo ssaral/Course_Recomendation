@@ -1,0 +1,36 @@
+<!DOCHTML html>
+<html lang="en">
+<head>
+	<title>Course Selection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+
+<style>
+	body
+	{ font-family: 'Poppins', sans-serif; 
+	/* Location of the image */ background-image: url('{{ url_for('static', filename='images/bg_course_selection.jpg') }}');  /*background-image: url('../static/images/bg_course_selection.jpg'); */
+	/* Background image is centered vertically and horizontally at all times */ background-position: center center; 
+	/* Background image doesn’t tile */ background-repeat: no-repeat; 
+	/* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */ background-attachment: fixed; 
+	/* This is what makes the background image rescale based on the container’s size */ background-size: cover; 
+	/* Set a background color that will be displayed while the background image is loading */ background-color: lightgrey; 
+	}
+	#desc { background-color: white; padding: 20px;  text-align: center; border-radius: 25px; margin-top:50px; } 
+
+	
+</style>
+</head>
+
+<body>
+	<div class="container"> 
+		<br>
+		<p id="desc" > Select your preffered stream from below available options </p>
+	</div>
+<h3>	course selection webpage </h3>
+
+</body>
+</html>
