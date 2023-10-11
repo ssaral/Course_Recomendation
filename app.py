@@ -93,7 +93,7 @@ def forgot_pwd():
 	    conn = psycopg2.connect(**db_params)
 	    cursor = conn.cursor()
 	    
-	    #fetching password for that user
+	    #fetching password for that user. // NOTE: username, //
 	    cursor.execute("SELECT password FROM user_login_table WHERE username = %s", (username,))
 	    flag = cursor.fetchone() 
 	    print("flag ki value", flag) 
