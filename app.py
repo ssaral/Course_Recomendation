@@ -25,9 +25,14 @@ def authenticate():
     conn = psycopg2.connect(**db_params)
     cursor = conn.cursor()
 
-    # Query the database to check user credentials (this is a simplified example)
-    cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
-    user = cursor.fetchone()
+    # Query the database to check user credentials (this is a simplified example) 
+    try:
+        check_login_script = 'SELECT * FROM user_login_table WHERE username = %s AND password = %s'
+        cursor.execute( check_login_script, (username, password))
+        user = cursor.fetchall()
+        print("Checking value of user", cursor.fetchall()) 
+    except Exception as e:
+        print("Error executing SQL query:", str(e))
 
     cursor.close()
     conn.close()
