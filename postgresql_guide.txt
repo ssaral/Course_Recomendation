@@ -69,3 +69,6 @@ localhost server connection
 
 user - postgres
 pwd - postgres
+
+user - saral
+password - saral 
