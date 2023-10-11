@@ -39,12 +39,13 @@ def authenticate():
 
     if user:
         # For Successful login redirecting to choose stream page.
-        print("Login successfull for", user[0][0])
+        print("Login successfull for", user)
         return redirect(url_for('choose_stream'))
     else:
         # Failed login
-        print("Login failed for", user[0])
-        return "Login failed"
+        print("Login failed for", user)
+        #return "Login failed"
+        return render_template('index.html', error_message="User and/or Password is incorrect. Kindly create a new account or Enter valid Username and Password.")
         
 @app.route('/choose_your_stream')
 def choose_stream():
