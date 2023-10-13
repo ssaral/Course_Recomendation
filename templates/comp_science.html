@@ -1,0 +1,43 @@
+<!DOCHTML html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+
+<style>
+	#desc 
+	{  background-image: url('{{ url_for('static', filename='images/bgimage.jpg') }}');  color: white;  padding: 20px;  text-align: center; border-radius: 25px;} 
+	.row 
+	{  display: flex; }
+	.column 
+	{  flex: 50%;  padding: 50px;/*  background-color: white;*/ }        
+	.desp-detail 
+	{  text-align: center; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); background-color: rgba(255, 255, 255, 0.5); top: 50%; left: 50%; color: black; padding: 20px; border-radius: 20px; }
+	.center 
+	{ background-image: url('{{ url_for('static', filename='images/footerimage.jpeg') }}'); background-repeat: no-repeat; background-size: cover; 
+	  background-color: lightgrey;  text-align: center; padding: 20; background-position: bottom center; margin-top:220px;	
+	}
+	
+	body
+	{ font-family: 'Poppins', sans-serif; 
+	/* Location of the image background-image: url('{{ url_for('static', filename='images/rocket.jpg') }}'); 
+	/* Background image is centered vertically and horizontally at all times  background-position: center center; 
+	/* Background image doesn’t tile  background-repeat: no-repeat; 
+	/* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height  background-attachment: fixed; 
+	/* This is what makes the background image rescale based on the container’s size background-size: cover; 
+	/* Set a background color that will be displayed while the background image is loading  background-color: #464646;  */
+	}
+	
+</style>
+</head>
+
+<body>
+	<div class="container"><br> <p id="desc"; style="font-size: 40;" > Computer Science </p> </div>
+	<br><hr>
+</body>
+</html>

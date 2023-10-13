@@ -19,6 +19,14 @@
 	/* This is what makes the background image rescale based on the container’s size */ background-size: cover; 
 	/* Set a background color that will be displayed while the background image is loading */ background-color: lightgrey; 
 	}
+	div.gallery { margin: 50px 20px 75px; border: 1px solid #ccc; float: left; width:450px ; height: 450px; border-radius:10px; }
+	/* margin - top right left bottom // top r&l bottom // t&b r&l // t&b&r&l --> no. of params */
+	div.gallery:hover { border: 1px solid #777; }
+
+	div.gallery img { width: 100%; object-fit: cover;}
+
+	div.desc { background-color:white; padding: 15px; text-align: center; }
+	
 	#desc { background-color: white; padding: 20px;  text-align: center; border-radius: 25px; margin-top:50px; } 
 
 	
@@ -30,7 +38,46 @@
 		<br>
 		<p id="desc" > Select your preffered stream from below available options </p>
 	</div>
-<h3>	course selection webpage </h3>
+	
+	<div class="gallery">
+		<a target="_blank" href="/computer-science">
+		<img src="{{ url_for('static', filename='images/comp_science.jpeg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+	
+	<div class="gallery">
+		<a target="_blank" href="/under-construction">
+		<img src="{{ url_for('static', filename='images/electrical_engg.jpeg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+	
+	<div class="gallery">
+		<a target="_blank" href="img_5terre.jpg">
+		<img src="{{ url_for('static', filename='images/example_stream3.jpg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+	<div class="gallery">
+		<a target="_blank" href="img_5terre.jpg">
+		<img src="{{ url_for('static', filename='images/example_stream4.jpg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+	<div class="gallery">
+		<a target="_blank" href="img_5terre.jpg">
+		<img src="{{ url_for('static', filename='images/example_stream5.jpg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+	<div class="gallery">
+		<a target="_blank" href="img_5terre.jpg">
+		<img src="{{ url_for('static', filename='images/example_stream6.jpg') }}" alt="Cinque Terre" width="600" height="400">
+		</a>
+		<div class="desc">Add a description of the image here</div>
+	</div>
+</div>
 
 </body>
 </html>
