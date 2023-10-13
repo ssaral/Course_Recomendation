@@ -28,6 +28,14 @@
 	div.desc { background-color:white; padding: 15px; text-align: center; }
 	
 	#desc { background-color: white; padding: 20px;  text-align: center; border-radius: 25px; margin-top:50px; } 
+	.scrolling-wrapper {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		white-space: nowrap;
+		margin-top: 75px;
+		.card { display: inline-block;  }
+	}
+
 
 	
 </style>
@@ -38,46 +46,60 @@
 		<br>
 		<p id="desc" > Select your preffered stream from below available options </p>
 	</div>
-	
-	<div class="gallery">
-		<a target="_blank" href="/computer-science">
-		<img src="{{ url_for('static', filename='images/comp_science.jpeg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
+	<div class="scrolling-wrapper">	
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/computer-science">
+				<img src="{{ url_for('static', filename='images/comp_science.jpeg') }}" alt="Cinque Terre" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/under-construction">
+				<img src="{{ url_for('static', filename='images/electrical_engg.jpeg') }}" alt="Ele_Engg" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/under-construction">
+				<img src="{{ url_for('static', filename='images/example_stream3.jpg') }}" alt="Cinque Terre" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/under-construction">
+				<img src="{{ url_for('static', filename='images/example_stream4.jpg') }}" alt="Cinque Terre" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/under-construction">
+				<img src="{{ url_for('static', filename='images/example_stream5.jpg') }}" alt="Cinque Terre" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="gallery">
+				<a target="_blank" href="/under-construction">
+				<img src="{{ url_for('static', filename='images/example_stream6.jpg') }}" alt="Cinque Terre" width="600" height="400">
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
 	</div>
-	
-	<div class="gallery">
-		<a target="_blank" href="/under-construction">
-		<img src="{{ url_for('static', filename='images/electrical_engg.jpeg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
+	<div class="container"> 
+		<br>
+		<p id="desc" > Something Catchy </p>
 	</div>
-	
-	<div class="gallery">
-		<a target="_blank" href="img_5terre.jpg">
-		<img src="{{ url_for('static', filename='images/example_stream3.jpg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
-	</div>
-	<div class="gallery">
-		<a target="_blank" href="img_5terre.jpg">
-		<img src="{{ url_for('static', filename='images/example_stream4.jpg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
-	</div>
-	<div class="gallery">
-		<a target="_blank" href="img_5terre.jpg">
-		<img src="{{ url_for('static', filename='images/example_stream5.jpg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
-	</div>
-	<div class="gallery">
-		<a target="_blank" href="img_5terre.jpg">
-		<img src="{{ url_for('static', filename='images/example_stream6.jpg') }}" alt="Cinque Terre" width="600" height="400">
-		</a>
-		<div class="desc">Add a description of the image here</div>
-	</div>
-</div>
 
 </body>
 </html>
