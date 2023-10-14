@@ -86,7 +86,7 @@ def register():
 
 @app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_pwd():
-	password=None
+	password=None #if-else mai use kar raha hu and then return mai if user is found. 
 	if request.method == 'POST':
 	    username = request.form['username']
 
@@ -117,6 +117,33 @@ def forgot_pwd():
 @app.route('/under-construction')
 def under_construction():
     return render_template('under_construction.html')
+
+	
+@app.route('/computer-science', methods=['GET', 'POST'])
+def comp_science():
+    result = None
+
+    if request.method == 'POST':
+        selected_option = request.form.get('selectedOption')
+        
+        # To connect to the PostgreSQL database
+        conn = psycopg2.connect(**db_params)
+        cursor = conn.cursor()
+        
+        cursor.execute("SELECT * FROM course_description")  # WHERE username = %s", (username,))
+        result = cursor.fetchall() 
+        
+        #Here, we assume a simple dictionary for demonstration
+        #data = {
+        #    'option1': 'Data for Option 1',
+        #    'option2': 'Data for Option 2',
+        #}
+
+        #result = data.get(selected_option, 'No data found')
+        cursor.close()
+        conn.close()
+
+    return render_template('comp_science.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)

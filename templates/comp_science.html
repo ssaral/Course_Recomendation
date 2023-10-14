@@ -22,6 +22,8 @@
 	{ background-image: url('{{ url_for('static', filename='images/footerimage.jpeg') }}'); background-repeat: no-repeat; background-size: cover; 
 	  background-color: lightgrey;  text-align: center; padding: 20; background-position: bottom center; margin-top:220px;	
 	}
+	.csv_click
+	{ margin-top:150px; text-align:"center" }
 	
 	body
 	{ font-family: 'Poppins', sans-serif; 
@@ -33,11 +35,35 @@
 	/* Set a background color that will be displayed while the background image is loading  background-color: #464646;  */
 	}
 	
+	select { width: 100%; padding: 16px 20px; border: none; border-radius: 4px; background-color: #f1f1f1; }
+	
 </style>
 </head>
 
 <body>
 	<div class="container"><br> <p id="desc"; style="font-size: 40;" > Computer Science </p> </div>
 	<br><hr>
+	<div class="container" align="center">
+	<label for="role">Choose your role:</label>
+		<form action="/computer-science" method="POST">
+			<select name="role" id="role">
+			<option value="option1">Option1</option>
+			<option value="option2">Option2</option>
+			<option value="option3">Option3</option>
+			<option value="option4">Option4</option>
+			</select>
+			<br><br>
+			<input type="submit" id="selected_role" value="Submit">
+		</form>
+		<div id="resultField">
+			{{ result }}
+		</div>
+		<div class="csv_click">
+		To download the result in CSV file format. <br> 
+			<form action="/computer-science" method="POST"> 
+				<button type="button" onclick="alert('CSV file downloaded')" margin="20px"> Download CSV file </button> 
+			</form>
+		</div>
+	</div>
 </body>
 </html>

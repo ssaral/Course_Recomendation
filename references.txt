@@ -3,3 +3,5 @@ References Links :
 https://www.w3schools.com/howto/howto_css_form_on_image.asp
 https://www.w3schools.com/css/css_image_gallery.asp
 https://www.w3schools.com/howto/howto_js_alert.asp
+https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6 #scrolling container
+https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit #css styling 
