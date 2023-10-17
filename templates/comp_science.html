@@ -25,15 +25,7 @@
 	.csv_click
 	{ margin-top:150px; text-align:"center" }
 	
-	body
-	{ font-family: 'Poppins', sans-serif; 
-	/* Location of the image background-image: url('{{ url_for('static', filename='images/rocket.jpg') }}'); 
-	/* Background image is centered vertically and horizontally at all times  background-position: center center; 
-	/* Background image doesn’t tile  background-repeat: no-repeat; 
-	/* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height  background-attachment: fixed; 
-	/* This is what makes the background image rescale based on the container’s size background-size: cover; 
-	/* Set a background color that will be displayed while the background image is loading  background-color: #464646;  */
-	}
+	body{ font-family: 'Poppins', sans-serif; }
 	
 	select { width: 100%; padding: 16px 20px; border: none; border-radius: 4px; background-color: #f1f1f1; }
 	
@@ -53,7 +45,7 @@
 			<option value="option4">Option4</option>
 			</select>
 			<br><br>
-			<input type="submit" id="selected_role" value="Submit">
+			<input type="submit" value="Submit"> 
 		</form>
 		<div id="resultField">
 			{{ result }}
@@ -62,6 +54,7 @@
 		To download the result in CSV file format. <br> 
 			<form action="/computer-science" method="POST"> 
 				<button type="button" onclick="alert('CSV file downloaded')" margin="20px"> Download CSV file </button> 
+				<a href="{{ url_for('download_csv') }}">Download CSV</a>
 			</form>
 		</div>
 	</div>

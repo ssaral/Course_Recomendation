@@ -124,15 +124,15 @@ def comp_science():
     result = None
 
     if request.method == 'POST':
-        selected_option = request.form.get('selectedOption')
-        
+        selected_option = request.form['role']
+        print("selected option will be displayed here", selected_option)        
         # To connect to the PostgreSQL database
         conn = psycopg2.connect(**db_params)
         cursor = conn.cursor()
         
         cursor.execute("SELECT * FROM course_description")  # WHERE username = %s", (username,))
         result = cursor.fetchall() 
-        
+
         #Here, we assume a simple dictionary for demonstration
         #data = {
         #    'option1': 'Data for Option 1',
@@ -144,6 +144,11 @@ def comp_science():
         conn.close()
 
     return render_template('comp_science.html', result=result)
+    
+@app.route('/download_csv')
+def download_csv():
+	print("download csv wala portion")
+	return render_template('comp_science.html') 
 
 if __name__ == '__main__':
     app.run(debug=True)
