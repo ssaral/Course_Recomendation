@@ -132,23 +132,15 @@ def comp_science():
         conn = psycopg2.connect(**db_params)
         cursor = conn.cursor()
         
-        cursor.execute("SELECT title, url, title FROM course_description")  # WHERE keyword = %s", (selected_option,))
+        cursor.execute("SELECT * FROM course_description")  # WHERE keyword = %s", (selected_option,))
         result = cursor.fetchall() 
-        
-        #download_csv(result);
 
         #result = data.get(selected_option, 'No data found')
         cursor.close()
         conn.close()
-        
-        # Create a CSV string from the query result
-        csv_data = "Title,URL,Description\n"
-        for row in result:
-            csv_data += f"{row[0]},{row[1]},{row[2]}\n"
-        
-        # Create a Flask response with the CSV data
-        response = Response(csv_data, content_type="text/csv")
-        response.headers["Content-Disposition"] = "attachment; filename=courses.csv"
+
+        print(result)
+        print(result[0])
         
 
     return render_template('comp_science.html', result=result)
