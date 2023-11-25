@@ -42,10 +42,14 @@
 	<label for="role">Choose your role:</label>
 		<form action="/computer-science" method="POST">
 			<select name="role" id="role">
-			<option value="option1">Option1</option>
-			<option value="option2">Option2</option>
-			<option value="option3">Option3</option>
-			<option value="option4">Option4</option>
+			<option value="Algorithms and Data Structures">Algorithms and Data Structures</option>
+			<option value="Artificial Intelligence">Artificial Intelligence</option>
+			<option value="Theory of Computation">Theory of Computation</option>
+            <option value="Software Design and Engineering">Software Design and Engineering</option>
+            <option value="Programming Languages">Programming Languages</option>
+			<option value="Computer Design and Engineering">Computer Design and Engineering</option>
+            <option value="Mathematics">Mathematics</option>
+            <!-- <option value="option4">Select Option</option> -->
 			</select>
 			<br><br>
 			<input type="submit" value="Submit"> <br>
@@ -62,8 +66,7 @@
 		            <tr>
         	        	<th>Title</th>
         	        	<th>Description</th>
-		                <th>Keywords</th>
-		                <th>Instructor</th>
+		                <th>Instructor Name</th>
 		                <th>URL</th>
 		            </tr>
 	            </thead>
@@ -71,7 +74,7 @@
         	        {% if result %}
                 	    {% for course in result %}
 	                        <tr>
-        	                    <td>{{ course[0] }}</td>
+        	                    <!-- <td>{{ course[0] }}</td> -->
                 	            <td>{{ course[1] }}</td>
                         	    <td>{{ course[2] }}</td>
 	                            <td>{{ course[3] }}</td>

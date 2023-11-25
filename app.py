@@ -131,12 +131,9 @@ def comp_science():
         # To connect to the PostgreSQL database
         conn = psycopg2.connect(**db_params)
         cursor = conn.cursor()
+
+        selected_option = selected_option.lower()
         
-        # cursor.execute("SELECT * FROM course_description")  # WHERE keyword = %s", (selected_option,))
-        # cursor.execute("SELECT * FROM course_description WHERE keywords::text ILIKE %s", ('%' + selected_option + '%',))
-        # cursor.execute("SELECT * FROM course_description WHERE keywords && %s", (selected_option,))
-        # cursor.execute("SELECT * FROM course_description WHERE %s = ANY(keywords)", (selected_option,))
-        # select * from testarr where names && '{"margaret","john"}';
         # Use a parameterized query
         query = "SELECT * FROM courses_mit WHERE tags && %s"
         # Execute the query with the variable as a parameter

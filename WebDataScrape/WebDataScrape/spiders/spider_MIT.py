@@ -16,7 +16,15 @@ class SpiderMitSpider(scrapy.Spider):
         course['inst_name'] = response.css('.strip-link-offline::text').get()
         course['url'] = response.url
         tags = response.css('.text-black.course-info-topic.strip-link-offline::text').getall()
-        course['tags'] = [tag.strip() for tag in tags] if tags else None
+        new_tags = []
+        for tag_original in tags:
+            if tag_original not in new_tags:
+                new_tags.append(tag_original)
+        lowercase_tags = [item.lower() for item in new_tags]
+        # For debug purpose
+        print(lowercase_tags)
+        print(tags)
+        course['tags'] = [tag.strip() for tag in lowercase_tags] if lowercase_tags else None
         yield course
         # pass
 
