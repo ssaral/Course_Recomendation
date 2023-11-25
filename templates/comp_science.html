@@ -41,7 +41,8 @@
 	<div class="container" align="center">
 	<label for="role">Choose your role:</label>
 		<form action="/computer-science" method="POST">
-			<select name="role" id="role">
+			<select name="role" id="role"> 
+            <option value="null">Select Option</option>
 			<option value="Algorithms and Data Structures">Algorithms and Data Structures</option>
 			<option value="Artificial Intelligence">Artificial Intelligence</option>
 			<option value="Theory of Computation">Theory of Computation</option>
@@ -49,7 +50,6 @@
             <option value="Programming Languages">Programming Languages</option>
 			<option value="Computer Design and Engineering">Computer Design and Engineering</option>
             <option value="Mathematics">Mathematics</option>
-            <!-- <option value="option4">Select Option</option> -->
 			</select>
 			<br><br>
 			<input type="submit" value="Submit"> <br>
@@ -78,7 +78,8 @@
                 	            <td>{{ course[1] }}</td>
                         	    <td>{{ course[2] }}</td>
 	                            <td>{{ course[3] }}</td>
-        	                    <td>{{ course[4] }}</td>
+        	                    <td><a href="{{ course[4] }}" target="_blank">{{ course[4] }}</a></td>
+                                <!-- <td>{{ course[4] }}</td> -->
                 	        </tr>
 	                    {% endfor %}
         	        {% else %}
@@ -88,14 +89,6 @@
 		            {% endif %}
 	    	    </tbody>
 	  	</table>
-		</div>
-
-		<div class="csv_click">
-		To download the result in CSV file format. <br> 
-			<form action="/download-csv" method="POST"> 
-                <input type="hidden" name="role" value="{{ request.form.role }}">
-				<button type="submit" > Download CSV file </button> <br> <!-- onclick="alert('CSV file downloaded')" margin="20px" --!>
-			</form>
 		</div>
 	</div>
 </body>

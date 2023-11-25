@@ -14,10 +14,12 @@ db_params = {
     'port': '5432'       
 }
 
+# Index Page
 @app.route('/')
 def login():
     return render_template('index.html')
 
+# Authentication Logic
 @app.route('/auth', methods=['POST'])
 def authenticate():
     username = request.form['username']
@@ -47,16 +49,19 @@ def authenticate():
         # Failed login
         print("Login failed for", user)
         #return "Login failed"
-        return render_template('index.html', error_message="User and/or Password is incorrect. Kindly create a new account or Enter valid Username and Password.")
-        
+        return render_template('index.html', error_message="User and/or Password is incorrect. Kindly create a new account or Enter valid Username and Password.") 
+
+# Choosing Stream logic
 @app.route('/choose_your_stream')
 def choose_stream():
     return render_template('stream_selection.html')
 
+# SignUp Logic
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
 
+# Register Logic
 @app.route('/register', methods=['POST'])
 def register():
     username = request.form['username']
@@ -86,6 +91,7 @@ def register():
     	#return redirect(url_for('login'))
     	return render_template('signup.html', alert_message="Account created. Kindly procced by clicking on login page.")
 
+# Forget Password Logic
 @app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_pwd():
 	password=None #if-else mai use kar raha hu and then return mai if user is found. 
@@ -103,7 +109,7 @@ def forgot_pwd():
 	    if flag:
 	    	print("password wala flag: ", flag)
 	    	password=flag[0]
-	    	print("passwaor ki value is", password)
+	    	print("password ki value is", password)
 	    	cursor.close()
 	    	conn.close()
 	    else:
@@ -115,12 +121,14 @@ def forgot_pwd():
 	# Redirecting to the same page if user found and display password
 	return render_template('forgot_password.html', password=password)
 
-    
+
+# Under Construction Logic
 @app.route('/under-construction')
 def under_construction():
     return render_template('under_construction.html')
 
-	
+
+# Computer Science Logic
 @app.route('/computer-science', methods=['GET','POST'])
 def comp_science():
     result = None
@@ -140,8 +148,7 @@ def comp_science():
         cursor.execute(query, ([selected_option],))
         
         result = cursor.fetchall() 
-
-        #result = data.get(selected_option, 'No data found')
+        
         cursor.close()
         conn.close()
 
@@ -151,6 +158,8 @@ def comp_science():
 
     return render_template('comp_science.html', result=result)
 
+'''
+Download CSV LOGIC
 @app.route('/download-csv', methods=['POST'])
 def download_csv():
     result = None
@@ -178,48 +187,7 @@ def download_csv():
         response.headers["Content-Disposition"] = "attachment; filename=courses.csv"
         
 
-    return render_template('comp_science.html') #, result=result)
-'''
-	result = None	
-	print("download csv wala portion")
-	if data:
-		csv_data = generate_csv(data)
-		print("csv data", csv_data)
-		Response.headers["Content-Disposition"] = "attachment; filename=data.csv"
-		Response.headers["Content-Type"] = "text/csv"
-		return "Success"#Response( csv_data, mimetype="text/csv", headers={"Content-disposition": "attachment; filename=output.csv"} )
-	else:
-		return "Failed to fetch data from the database."
-	
-	return render_template('comp_science.html') 
-'''
-
-#generating a CSV file
-def generate_csv(data):
-    output = io.StringIO()
-    writer = csv.writer(output)
-    writer.writerow(["role_aspired", "URL", "extra_column"])  
-
-    for row in data:
-        writer.writerow(row)
-
-    output.seek(0)
-    return output
-
-'''
-# Flask route to download the CSV file
-@app.route('/download_csv', methods=['GET'])
-def download_csv():
-    data = get_data_from_postgres()
-    if data:
-        csv_data = generate_csv(data)
-        return Response(
-            csv_data,
-            mimetype="text/csv",
-            headers={"Content-disposition": "attachment; filename=data.csv"}
-        )
-    else:
-        return "Failed to fetch data from the database."
+    return render_template('comp_science.html')
 '''
 
 if __name__ == '__main__':

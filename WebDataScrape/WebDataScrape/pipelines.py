@@ -1,10 +1,3 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-# useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 import psycopg2
 
@@ -12,13 +5,15 @@ class WebdatascrapePipeline:
     def __init__(self):
         hostname = 'localhost'
         username = 'postgres'
-        password = 'postgres'  # your password
+        password = 'postgres' 
         database = 'cs699_pdb'
         # port = '5432'
 
+        # Establishing connection to pgsql
         self.connection = psycopg2.connect(host=hostname, user=username, password=password, dbname=database)
         self.cur = self.connection.cursor()
 
+        # Create table if it does not exist
         self.cur.execute("""
                 CREATE TABLE IF NOT EXISTS courses_mit(
                     id serial PRIMARY KEY, 
@@ -31,9 +26,9 @@ class WebdatascrapePipeline:
                 """)
 
     def process_item(self, item, spider):
-        
         self.cur.execute("select * from courses_mit where title = %s", (item['title'],))
         result = self.cur.fetchone()
+        # If course already in Database, then do not add else add.
         if result:
             spider.logger.warn("Item already in database: %s" % item['title'])
         else:
