@@ -1,0 +1,98 @@
+<!DOCHTML html>
+<html lang="en">
+<head>
+	<title>Computer Science</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+
+<style>
+	#desc 
+	{  background-image: url('{{ url_for('static', filename='images/bgimage.jpg') }}');  color: white;  padding: 20px;  text-align: center; border-radius: 25px;} 
+	.row 
+	{  display: flex; }
+	.column 
+	{  flex: 50%;  padding: 50px;/*  background-color: white;*/ }        
+	.desp-detail 
+	{  text-align: center; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); background-color: rgba(255, 255, 255, 0.5); top: 50%; left: 50%; color: black; padding: 20px; border-radius: 20px; }
+	.center 
+	{ background-image: url('{{ url_for('static', filename='images/footerimage.jpeg') }}'); background-repeat: no-repeat; background-size: cover; 
+	  background-color: lightgrey;  text-align: center; padding: 20; background-position: bottom center; margin-top:220px;	
+	} 
+	.csv_click
+	{ margin-top:150px; text-align:"center" }
+	
+	body{ font-family: 'Poppins', sans-serif; }
+	input { margin: 10px 0px 15px}
+	select { width: 100%; padding: 16px 20px; border: none; border-radius: 4px; background-color: #f1f1f1; margin:10px; }
+	table { border-collapse: collapse; width: 100%; }
+    	th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    	tr:hover {background-color: coral;}
+	
+</style>
+</head>
+
+<body>
+	<div class="container"><br> <p id="desc"; style="font-size: 40;" > Computer Science </p> </div>
+	<br><hr>
+	<div class="container" align="center">
+	<label for="role">Choose your role:</label>
+		<form action="/computer-science" method="POST">
+			<select name="role" id="role">
+			<option value="Algorithms and Data Structures">Algorithms and Data Structures</option>
+			<option value="option2">Option2</option>
+			<option value="option3">Option3</option>
+			<option value="option4">Option4</option>
+			</select>
+			<br><br>
+			<input type="submit" value="Submit"> <br>
+			
+		</form>
+		<!-- 
+		<div id="resultField">
+			{{ result }}
+		</div>
+		!-->
+		<div id="resultField">
+    		<table>
+		        <thead>
+		            <tr>
+        	        	<th>Title</th>
+        	        	<th>Description</th>
+		                <th>Instructor Name</th>
+		                <th>URL</th>
+		            </tr>
+	            </thead>
+	            <tbody>
+        	        {% if result %}
+                	    {% for course in result %}
+	                        <tr>
+        	                    <!-- <td>{{ course[0] }}</td> -->
+                	            <td>{{ course[1] }}</td>
+                        	    <td>{{ course[2] }}</td>
+	                            <td>{{ course[3] }}</td>
+        	                    <td>{{ course[4] }}</td>
+                	        </tr>
+	                    {% endfor %}
+        	        {% else %}
+		                <tr>
+	        	            <td colspan="5"> Select your aspiring-role to get courses list.  </td>
+	        	        </tr>
+		            {% endif %}
+	    	    </tbody>
+	  	</table>
+		</div>
+
+		<div class="csv_click">
+		To download the result in CSV file format. <br> 
+			<form action="/download-csv" method="POST"> 
+                <input type="hidden" name="role" value="{{ request.form.role }}">
+				<button type="submit" > Download CSV file </button> <br> <!-- onclick="alert('CSV file downloaded')" margin="20px" --!>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

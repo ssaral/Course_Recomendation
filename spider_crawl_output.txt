@@ -1,0 +1,1144 @@
+saral@ssaral:~/local_proj/WebDataScrape/WebDataScrape$ scrapy crawl spider_MIT 
+2023-11-25 22:27:22 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: WebDataScrape)
+2023-11-25 22:27:22 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.13, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.1.0, Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0], pyOpenSSL 21.0.0 (OpenSSL 3.0.2 15 Mar 2022), cryptography 3.4.8, Platform Linux-6.2.0-37-generic-x86_64-with-glibc2.35
+2023-11-25 22:27:22 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2023-11-25 22:27:22 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'WebDataScrape',
+ 'NEWSPIDER_MODULE': 'WebDataScrape.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['WebDataScrape.spiders']}
+2023-11-25 22:27:22 [scrapy.extensions.telnet] INFO: Telnet Password: 614b38ee7078f76b
+2023-11-25 22:27:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-11-25 22:27:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-11-25 22:27:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-11-25 22:27:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['WebDataScrape.pipelines.WebdatascrapePipeline']
+2023-11-25 22:27:22 [scrapy.core.engine] INFO: Spider opened
+2023-11-25 22:27:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-11-25 22:27:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/robots.txt> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-780-semiconductor-manufacturing-spring-2003/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-5830-database-systems-fall-2023/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/res-6-013-ai-101-fall-2021/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2022/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/14-15-networks-spring-2022/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-801-machine-vision-fall-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-s191-introduction-to-deep-learning-january-iap-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-780-semiconductor-manufacturing-spring-2003/>
+{'des': '6.780 covers statistical modeling and the control of semiconductor '
+        'fabrication processes and plants. Topics covered include: design of '
+        'experiments, response surface modeling, and process optimization; '
+        'defect and parametric yield modeling; process/device/circuit yield '
+        'optimization; monitoring, diagnosis, and feedback control of '
+        'equipment and processes; and analysis and scheduling of semiconductor '
+        'manufacturing operations.',
+ 'inst_name': 'Prof. Duane Boning',
+ 'tags': ['Engineering',
+          'Chemical Engineering',
+          'Process Control Systems',
+          'Electrical Engineering',
+          'Electronics',
+          'Materials Science and Engineering',
+          'Electronic Materials',
+          'Systems Engineering',
+          'Computational Modeling and Simulation',
+          'Engineering',
+          'Chemical Engineering',
+          'Process Control Systems',
+          'Electrical Engineering',
+          'Electronics',
+          'Materials Science and Engineering',
+          'Electronic Materials',
+          'Systems Engineering',
+          'Computational Modeling and Simulation'],
+ 'title': 'Semiconductor Manufacturing',
+ 'url': 'https://ocw.mit.edu/courses/6-780-semiconductor-manufacturing-spring-2003/'}
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/>
+{'des': 'This course covers abstractions and implementation techniques for the '
+        'design of distributed systems. Topics include: server design, network '
+        'programming, naming, storage systems, security, and fault tolerance. '
+        'The assigned readings for the course are from current literature. '
+        'This course is worth 6 Engineering Design Points.',
+ 'inst_name': 'Prof. Robert Morris',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Computer Networks'],
+ 'title': 'Distributed Computer Systems Engineering',
+ 'url': 'https://ocw.mit.edu/courses/6-824-distributed-computer-systems-engineering-spring-2006/'}
+2023-11-25 22:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-5830-database-systems-fall-2023/>
+{'des': 'This course relies on primary readings from the database community to '
+        'introduce graduate/undergraduate students to the foundations of '
+        'database systems, focusing on basics such as the relational algebra '
+        'and data model, schema normalization, query optimization, '
+        'transactions, and other more advanced topics. No prior database '
+        'experience is assumed, though students who have taken an '
+        'undergraduate course in databases are encouraged to attend.',
+ 'inst_name': 'Prof. Samuel Madden',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures'],
+ 'title': 'Database Systems',
+ 'url': 'https://ocw.mit.edu/courses/6-5830-database-systems-fall-2023/'}
+2023-11-25 22:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/> (referer: None)
+2023-11-25 22:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/res-6-013-ai-101-fall-2021/>
+{'des': ' What do these terms even mean? In\xa0AI\xa0101, MIT researcher '
+        'Brandon Leshchinskiy offers an introduction to artificial '
+        'intelligence that’s designed specifically for those with little to no '
+        'background in the subject. The workshop starts with a summary of key '
+        'concepts in\xa0AI, followed by an interactive exercise where '
+        'participants train their own algorithm. Finally, it closes with a '
+        'summary of key takeaways and Q/A. All are welcome!',
+ 'inst_name': 'Brandon Leshchinskiy',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Engineering',
+          'Computer Science',
+          'Artificial Intelligence'],
+ 'title': 'AI 101',
+ 'url': 'https://ocw.mit.edu/courses/res-6-013-ai-101-fall-2021/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2022/>
+{'des': 'This class uses revolutionary programmable interactivity to combine '
+        'material from three fields – Computer Science + Mathematics + '
+        'Applications – creating an engaging, efficient learning solution to '
+        'prepare students to be sophisticated and intuitive thinkers, '
+        'programmers, and solution providers for the modern interconnected '
+        'online world. Upon completion, students are well trained to be '
+        'scientific “trilinguals,” seeing and experimenting with mathematics '
+        'interactively as math is meant to be seen, and ready to participate '
+        'and contribute to open source development of large projects and '
+        'ecosystems.',
+ 'inst_name': 'Prof. Alan Edelman',
+ 'tags': ['Energy',
+          'Climate',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Energy',
+          'Climate',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation'],
+ 'title': 'Introduction to Computational Thinking',
+ 'url': 'https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2022/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-405j-advanced-complexity-theory-spring-2016/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022/>
+{'des': 'This course covers fundamental and advanced techniques in this field '
+        'at the intersection of computer vision, computer graphics, and '
+        'geometric deep learning. It will lay the foundations of how cameras '
+        'see the world, how we can represent 3D scenes for artificial '
+        'intelligence, how we can learn to reconstruct these representations '
+        'from only a single image, how we can guarantee certain kinds of '
+        'generalizations, and how we can train these models in a '
+        'self-supervised way.',
+ 'inst_name': 'Prof. Vincent Sitzmann',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization',
+          'Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization'],
+ 'title': 'Machine Learning for Inverse Graphics',
+ 'url': 'https://ocw.mit.edu/courses/6-s980-machine-learning-for-inverse-graphics-fall-2022/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/14-15-networks-spring-2022/>
+{'des': 'Networks are ubiquitous in our modern society. The World Wide Web '
+        'that links us to the rest of the world is the most visible example. '
+        'But it is only one of many networks in which we are situated. Our '
+        'social life is organized around networks of friends and colleagues. '
+        'These networks determine our information, influence our opinions, and '
+        'shape our political attitudes. They also link us, often through weak '
+        'but important ties, to everybody else in the United States and in the '
+        'world.\xa0 This course will introduce the tools for the study of '
+        'networks. It will show how certain common principles permeate the '
+        'functioning of these diverse networks and how the same issues related '
+        'to robustness, fragility, and interlinkages arise in many different '
+        'types of networks.',
+ 'inst_name': 'Prof. Alexander Wolitzky',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Social Science',
+          'Economics',
+          'Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Social Science',
+          'Economics'],
+ 'title': 'Networks',
+ 'url': 'https://ocw.mit.edu/courses/14-15-networks-spring-2022/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/>
+{'des': 'This course introduces principles, algorithms, and applications of '
+        'machine learning from the point of view of modeling and prediction. '
+        'It includes formulation of learning problems and concepts of '
+        'representation, over-fitting, and generalization. These concepts are '
+        'exercised in supervised learning and reinforcement learning, with '
+        'applications to images and to temporal sequences. This course is part '
+        'of the  , which is free to use.\xa0You have the option to sign up and '
+        'enroll in the course if you want to track your progress, or you can '
+        'view and use all the materials without enrolling.',
+ 'inst_name': 'Prof. Leslie Kaelbling',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Artificial Intelligence',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Artificial Intelligence'],
+ 'title': 'Introduction to Machine Learning',
+ 'url': 'https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-801-machine-vision-fall-2020/>
+{'des': 'This course is an\xa0introduction to the process of generating a '
+        'symbolic description of the environment from an image. It covers the '
+        'physics of image formation, image analysis, binary image processing, '
+        'and filtering. Machine vision has applications in robotics and the '
+        'intelligent interaction of machines with their environment. Students '
+        'taking the graduate version complete additional assignments.',
+ 'inst_name': 'Prof. Berthold Horn',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization',
+          'Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization'],
+ 'title': 'Machine Vision',
+ 'url': 'https://ocw.mit.edu/courses/6-801-machine-vision-fall-2020/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-s191-introduction-to-deep-learning-january-iap-2020/>
+{'des': 'This is MIT’s introductory course on deep learning methods with '
+        'applications to computer vision, natural language processing, '
+        'biology, and more! Students will gain foundational knowledge of deep '
+        'learning algorithms and get practical experience in building neural '
+        'networks in TensorFlow. Course concludes with a project proposal '
+        'competition with feedback from staff and panel of industry sponsors. '
+        'Prerequisites assume calculus (i.e. taking derivatives) and linear '
+        'algebra (i.e. matrix multiplication), and we’ll try to explain '
+        'everything else along the way! Experience in Python is helpful but '
+        'not necessary.',
+ 'inst_name': 'Alexander Amini',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Graphics and Visualization',
+          'Software Design and Engineering'],
+ 'title': 'Introduction to Deep Learning',
+ 'url': 'https://ocw.mit.edu/courses/6-s191-introduction-to-deep-learning-january-iap-2020/'}
+2023-11-25 22:27:23 [spider_MIT] WARNING: Item already in database: Introduction to Computational Thinking
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/>
+{'des': 'This is an introductory course on computational thinking. We use the '
+        'Julia programming language to approach real-world problems in varied '
+        'areas, applying data analysis and computational and mathematical '
+        'modeling. In this class you will learn computer science, software, '
+        'algorithms, applications, and mathematics as an integrated whole. '
+        'Topics include image analysis, particle dynamics and ray tracing, '
+        'epidemic propagation, and climate modeling.',
+ 'inst_name': 'Prof. Alan Edelman',
+ 'tags': ['Energy',
+          'Climate',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Energy',
+          'Climate',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation'],
+ 'title': 'Introduction to Computational Thinking',
+ 'url': 'https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/>
+{'des': 'This course is an introduction to mathematical modeling of '
+        'computational problems, as well as common algorithms, algorithmic '
+        'paradigms, and data structures used to solve these problems. It '
+        'emphasizes the relationship between algorithms and programming and '
+        'introduces basic performance measures and analysis techniques for '
+        'these problems.',
+ 'inst_name': 'Prof. Erik Demaine',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation'],
+ 'title': 'Introduction to Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/>
+{'des': 'This course emphasizes computability and computational complexity '
+        'theory. Topics include regular and context-free languages, decidable '
+        'and undecidable problems, reducibility, recursive function theory, '
+        'time and space measures on computation, completeness, hierarchy '
+        'theorems, inherently complex problems, oracles, probabilistic '
+        'computation, and interactive proof systems.',
+ 'inst_name': 'Prof. Michael Sipser',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation',
+          'Discrete Mathematics',
+          'Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation',
+          'Discrete Mathematics'],
+ 'title': 'Theory of Computation',
+ 'url': 'https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-820-fundamentals-of-program-analysis-fall-2015/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/>
+{'des': '6.172 is an 18-unit class that provides a hands-on, project-based '
+        'introduction to building scalable and high-performance software '
+        'systems. Topics include performance analysis, algorithmic techniques '
+        'for high performance, instruction-level optimizations, caching '
+        'optimizations, parallel programming, and building scalable systems. '
+        'The course programming language is C.',
+ 'inst_name': 'Prof. Charles Leiserson',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Software Design and Engineering',
+          'Systems Engineering',
+          'Systems Optimization',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Software Design and Engineering',
+          'Systems Engineering',
+          'Systems Optimization'],
+ 'title': 'Performance Engineering of Software Systems',
+ 'url': 'https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/>
+{'des': 'This course introduces students to machine learning in healthcare, '
+        'including the nature of clinical data and the use of machine learning '
+        'for risk stratification, disease progression modeling, precision '
+        'medicine, diagnosis, subtype discovery, and improving clinical '
+        'workflows.',
+ 'inst_name': 'Prof. Peter Szolovits',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Human-Computer Interfaces',
+          'Health and Medicine',
+          'Medical Imaging',
+          'Public Health',
+          'Engineering',
+          'Computer Science',
+          'Artificial Intelligence',
+          'Human-Computer Interfaces',
+          'Health and Medicine',
+          'Medical Imaging',
+          'Public Health'],
+ 'title': 'Machine Learning for Healthcare',
+ 'url': 'https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/>
+{'des': 'This course offers an advanced introduction to numerical analysis, '
+        'with a focus on accuracy and efficiency of numerical algorithms. '
+        'Topics include sparse-matrix/iterative and dense-matrix algorithms in '
+        'numerical linear algebra (for linear systems and eigenproblems), '
+        'floating-point arithmetic, backwards error analysis, conditioning, '
+        'and stability. Other computational topics (e.g., numerical '
+        'integration or nonlinear optimization) are also surveyed.',
+ 'inst_name': 'Prof. Steven G. Johnson',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Systems Engineering',
+          'Numerical Simulation',
+          'Mathematics',
+          'Linear Algebra',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Systems Engineering',
+          'Numerical Simulation',
+          'Mathematics',
+          'Linear Algebra'],
+ 'title': 'Introduction to Numerical Methods',
+ 'url': 'https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/>
+{'des': 'This class covers topics on the engineering of computer software and '
+        'hardware systems. Topics include techniques for controlling '
+        'complexity; strong modularity using client-server design, operating '
+        'systems; performance, networks; naming; security and privacy; '
+        'fault-tolerant systems, atomicity and coordination of concurrent '
+        'activities, and recovery; impact of computer systems on society.',
+ 'inst_name': 'Dr. Katrina LaCurts',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Operating Systems',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Computer Networks',
+          'Operating Systems',
+          'Software Design and Engineering'],
+ 'title': 'Computer System Engineering',
+ 'url': 'https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/>
+{'des': 'This course introduces architecture of digital systems, emphasizing '
+        'structural principles common to a wide range of technologies. It '
+        'covers the topics including multilevel implementation strategies, '
+        'definition of new primitives (e.g., gates, instructions, procedures, '
+        'processes) and their mechanization using lower-level elements. It '
+        'also includes analysis of potential concurrency, precedence '
+        'constraints and performance measures, pipelined and multidimensional '
+        'systems, instruction set design issues and architectural support for '
+        'contemporary software structures.',
+ 'inst_name': 'Chris Terman',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Electrical Engineering',
+          'Digital Systems',
+          'Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Electrical Engineering',
+          'Digital Systems'],
+ 'title': 'Computation Structures',
+ 'url': 'https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/>
+{'des': '6.0002 is the continuation of   and is intended for students with '
+        'little or no programming experience. It aims to provide students with '
+        'an understanding of the role computation can play in solving problems '
+        'and to help students, regardless of their major, feel justifiably '
+        'confident of their ability to write small programs that allow them to '
+        'accomplish useful goals. The class uses the Python 3.5 programming '
+        'language.',
+ 'inst_name': 'Prof. Eric Grimson',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Mathematics',
+          'Probability and Statistics',
+          'Engineering',
+          'Computer Science',
+          'Mathematics',
+          'Probability and Statistics'],
+ 'title': 'Introduction to Computational Thinking and Data Science',
+ 'url': 'https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/>
+{'des': ' is intended for students with little or no programming experience. '
+        'It aims to provide students with an understanding of the role '
+        'computation can play in solving problems and to help students, '
+        'regardless of their major, feel justifiably confident of their '
+        'ability to write small programs that allow them to accomplish useful '
+        'goals. The class uses the Python 3.5 programming language.',
+ 'inst_name': 'Dr. Ana Bell',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Programming Languages',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Programming Languages'],
+ 'title': 'Introduction to Computer Science and Programming in Python',
+ 'url': 'https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/>
+{'des': ' introduces fundamental principles and techniques of software '
+        'development, i.e., how to write software that is safe from bugs, easy '
+        'to understand, and ready for change. The course includes problem sets '
+        'and a final project. Important topics include specifications and '
+        'invariants; testing; abstract data types; design patterns for '
+        'object-oriented programming; concurrent programming and concurrency; '
+        'and functional programming. The   from Spring 2016, along with all '
+        'course materials, is available to OpenCourseWare users.',
+ 'inst_name': 'Prof. Robert Miller',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Networks',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Networks',
+          'Software Design and Engineering'],
+ 'title': 'Software Construction',
+ 'url': 'https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-405j-advanced-complexity-theory-spring-2016/>
+{'des': 'This graduate-level course focuses on current research topics in '
+        'computational complexity theory. Topics include: Nondeterministic, '
+        'alternating, probabilistic, and parallel computation models; Boolean '
+        'circuits; Complexity classes and complete sets; The polynomial-time '
+        'hierarchy; Interactive proof systems; Relativization; Definitions of '
+        'randomness; Pseudo-randomness and derandomizations;Interactive proof '
+        'systems and probabilistically checkable proofs.',
+ 'inst_name': 'Prof. Dana Moshkovitz',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation',
+          'Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation'],
+ 'title': 'Advanced Complexity Theory',
+ 'url': 'https://ocw.mit.edu/courses/18-405j-advanced-complexity-theory-spring-2016/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/>
+{'des': 'This is a graduate-level introduction to mathematics of information '
+        'theory. We will cover both classical and modern topics, including '
+        'information entropy, lossless data compression, binary hypothesis '
+        'testing, channel coding, and lossy data compression.',
+ 'inst_name': 'Prof. Yury Polyanskiy',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Probability and Statistics',
+          'Engineering',
+          'Computer Science',
+          'Theory of Computation',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Probability and Statistics'],
+ 'title': 'Information Theory',
+ 'url': 'https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-820-fundamentals-of-program-analysis-fall-2015/>
+{'des': 'This course offers a comprehensive introduction to the field of '
+        'program analysis. It covers some of the major forms of program '
+        'analysis including Type Checking, Abstract Interpretation and Model '
+        'Checking. For each of these, the course covers the underlying '
+        'theories as well as modern techniques and applications.',
+ 'inst_name': 'Prof. Armando Solar-Lezama',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Software Design and Engineering'],
+ 'title': 'Fundamentals of Program Analysis',
+ 'url': 'https://ocw.mit.edu/courses/6-820-fundamentals-of-program-analysis-fall-2015/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/>
+{'des': 'This is an intermediate algorithms course with an emphasis on '
+        'teaching techniques for the design and analysis of efficient '
+        'algorithms, emphasizing methods of application. Topics include '
+        'divide-and-conquer, randomization, dynamic programming, greedy '
+        'algorithms, incremental improvement, complexity, and cryptography.',
+ 'inst_name': 'Prof. Erik Demaine',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Networks',
+          'Cryptography',
+          'Mathematics',
+          'Applied Mathematics',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Networks',
+          'Cryptography',
+          'Mathematics',
+          'Applied Mathematics'],
+ 'title': 'Design and Analysis of Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-s096-introduction-to-c-and-c-january-iap-2013/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/>
+{'des': '6.858 Computer Systems Security is a class about the design and '
+        'implementation of secure computer systems. Lectures cover threat '
+        'models, attacks that compromise security, and techniques for '
+        'achieving security, based on recent research papers. Topics include '
+        'operating system (OS) security, capabilities, information flow '
+        'control, language security, network protocols, hardware security, and '
+        'security in web applications.',
+ 'inst_name': 'Prof. Nickolai Zeldovich',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Computer Design and Engineering',
+          'Software Design and Engineering'],
+ 'title': 'Computer Systems Security',
+ 'url': 'https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-828-operating-system-engineering-fall-2012/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-253-convex-analysis-and-optimization-spring-2012/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/>
+{'des': '  \xa0is an upper-level undergraduate, first-year graduate course on '
+        'network and computer security. It fits within the Computer Systems '
+        'and Architecture Engineering concentration.',
+ 'inst_name': 'Prof. Ronald Rivest',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Cryptography',
+          'Social Science',
+          'Public Administration',
+          'Security Studies',
+          'Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Cryptography',
+          'Social Science',
+          'Public Administration',
+          'Security Studies'],
+ 'title': 'Network and Computer Security',
+ 'url': 'https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/18-337j-parallel-computing-fall-2011/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/>
+{'des': 'This course is a fast-paced introduction to the C and C++ programming '
+        'languages, with an emphasis on good programming practices and how to '
+        'be an effective programmer in these languages. Topics include '
+        'object-oriented programming, memory management, advantages of C and '
+        'C++, optimization, and others. Students are given weekly coding '
+        'assignments and a final project to hone their skills. Recommended for '
+        'programmers with some background and experience in other languages. '
+        'This course is offered during the Independent Activities Period '
+        '(IAP), which is a special 4-week term at MIT that runs from the first '
+        'week of January until the end of the month.',
+ 'inst_name': 'Andre Kessler',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'Effective Programming in C and C++',
+ 'url': 'https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/>
+{'des': 'This course provides introduction to computer graphics algorithms, '
+        'software and hardware. Topics include: ray tracing, the graphics '
+        'pipeline, transformations, texture mapping, shadows, sampling, global '
+        'illumination, splines, animation and color. This course offers 6 '
+        'Engineering Design Points in MIT’s EECS program.',
+ 'inst_name': 'Prof. Wojciech Matusik',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Graphics and Visualization',
+          'Programming Languages',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Graphics and Visualization',
+          'Programming Languages'],
+ 'title': 'Computer Graphics',
+ 'url': 'https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-s096-introduction-to-c-and-c-january-iap-2013/>
+{'des': 'This course provides a fast-paced introduction to the C and C++ '
+        'programming languages. You will learn the required background '
+        'knowledge, including memory management, pointers, preprocessor '
+        'macros, object-oriented programming, and how to find bugs when you '
+        'inevitably use any of those incorrectly. There will be daily '
+        'assignments and a small-scale individual project. This course is '
+        'offered during the Independent Activities Period (IAP), which is a '
+        'special 4-week term at MIT that runs from the first week of January '
+        'until the end of the month.',
+ 'inst_name': 'Tom Lieber',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'Introduction to C and C++',
+ 'url': 'https://ocw.mit.edu/courses/6-s096-introduction-to-c-and-c-january-iap-2013/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/>
+{'des': 'An introduction to several fundamental ideas in electrical '
+        'engineering and computer science, using digital communication systems '
+        'as the vehicle. The three parts of the course—bits, signals, and '
+        'packets—cover three corresponding layers of abstraction that form the '
+        'basis of communication systems like the Internet. The course teaches '
+        'ideas that are useful in other parts of EECS: abstraction, '
+        'probabilistic analysis, superposition, time and frequency-domain '
+        'representations, system design principles and trade-offs, and '
+        'centralized and distributed algorithms. The course emphasizes '
+        'connections between theoretical concepts and practice using '
+        'programming tasks and some experiments with real-world communication '
+        'channels.',
+ 'inst_name': 'Prof. Hari Balakrishnan',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Electrical Engineering',
+          'Digital Systems',
+          'Signal Processing',
+          'Telecommunications',
+          'Engineering',
+          'Computer Science',
+          'Computer Networks',
+          'Electrical Engineering',
+          'Digital Systems',
+          'Signal Processing',
+          'Telecommunications'],
+ 'title': 'Introduction to EECS II: Digital Communication Systems',
+ 'url': 'https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-035-computer-language-engineering-spring-2010/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-828-operating-system-engineering-fall-2012/>
+{'des': 'This course studies fundamental design and implementation ideas in '
+        'the engineering of operating systems. Lectures are based on a study '
+        'of UNIX and research papers. Topics include virtual memory, threads, '
+        'context switches, kernels, interrupts, system calls, interprocess '
+        'communication, coordination, and the interaction between software and '
+        'hardware. Individual laboratory assignments involve implementation of '
+        'a small operating system in C, with some x86 assembly.',
+ 'inst_name': 'Prof. Frans Kaashoek',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Operating Systems',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Operating Systems',
+          'Software Design and Engineering'],
+ 'title': 'Operating System Engineering',
+ 'url': 'https://ocw.mit.edu/courses/6-828-operating-system-engineering-fall-2012/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/>
+{'des': 'Data structures play a central role in modern computer science. You '
+        'interact with data structures even more often than with algorithms '
+        '(think Google, your mail server, and even your network routers). In '
+        'addition, data structures are essential building blocks in obtaining '
+        'efficient algorithms. This course covers major results and current '
+        'directions of research in data structure. Thanks to videographers '
+        'Martin Demaine and Justin Zhang.',
+ 'inst_name': 'Prof. Erik Demaine',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures'],
+ 'title': 'Advanced Data Structures',
+ 'url': 'https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-253-convex-analysis-and-optimization-spring-2012/>
+{'des': 'This course will focus on fundamental subjects in convexity, duality, '
+        'and convex optimization algorithms. The aim is to develop the core '
+        'analytical and algorithmic issues of continuous optimization, '
+        'duality, and saddle point theory using a handful of unifying '
+        'principles that can be easily visualized and readily understood.',
+ 'inst_name': 'Prof. Dimitri Bertsekas',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Mathematics',
+          'Mathematical Analysis',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Mathematics',
+          'Mathematical Analysis'],
+ 'title': 'Convex Analysis and Optimization',
+ 'url': 'https://ocw.mit.edu/courses/6-253-convex-analysis-and-optimization-spring-2012/'}
+2023-11-25 22:27:23 [spider_MIT] WARNING: Item already in database: Introduction to Algorithms
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/>
+{'des': 'This course provides an introduction to mathematical modeling of '
+        'computational problems. It covers the common algorithms, algorithmic '
+        'paradigms, and data structures used to solve these problems. The '
+        'course emphasizes the relationship between algorithms and '
+        'programming, and introduces basic performance measures and analysis '
+        'techniques for these problems.',
+ 'inst_name': 'Prof. Erik Demaine',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures'],
+ 'title': 'Introduction to Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/>
+{'des': '6.003 covers the fundamentals of signal and system analysis, focusing '
+        'on representations of discrete-time and continuous-time signals '
+        '(singularity functions, complex exponentials and geometrics, Fourier '
+        'representations, Laplace and Z transforms, sampling) and '
+        'representations of linear, time-invariant systems (difference and '
+        'differential equations, block diagrams, system functions, poles and '
+        'zeros, convolution, impulse and step responses, frequency responses). '
+        'Applications are drawn broadly from engineering and physics, '
+        'including feedback and control, communications, and signal '
+        'processing.',
+ 'inst_name': 'Prof. Dennis Freeman',
+ 'tags': ['Engineering',
+          'Electrical Engineering',
+          'Digital Systems',
+          'Signal Processing',
+          'Engineering',
+          'Electrical Engineering',
+          'Digital Systems',
+          'Signal Processing'],
+ 'title': 'Signals and Systems',
+ 'url': 'https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/18-337j-parallel-computing-fall-2011/>
+{'des': 'This is an advanced interdisciplinary introduction to applied '
+        'parallel computing on modern supercomputers. It has a hands-on '
+        'emphasis on understanding the realities and myths of what is possible '
+        'on the world’s fastest machines. We will make prominent use of the  , '
+        'a free, open-source, high-performance dynamic programming language '
+        'for technical computing.',
+ 'inst_name': 'Prof. Alan Edelman',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Theory of Computation',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Linear Algebra',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Computer Design and Engineering',
+          'Theory of Computation',
+          'Mathematics',
+          'Applied Mathematics',
+          'Computation',
+          'Linear Algebra'],
+ 'title': 'Parallel Computing',
+ 'url': 'https://ocw.mit.edu/courses/18-337j-parallel-computing-fall-2011/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/>
+{'des': 'This course will provide a gentle, yet intense, introduction to '
+        'programming using Python for highly motivated students with little or '
+        'no prior experience in programming. The course will focus on planning '
+        'and organizing programs, as well as the grammar of the Python '
+        'programming language. The course is designed to help prepare students '
+        'for  . 6.01 assumes some knowledge of Python upon entering; the '
+        'course material for 6.189 has been specially designed to make sure '
+        'that concepts important to 6.01 are covered. This course is offered '
+        'during the Independent Activities Period (IAP), which is a special '
+        '4-week term at MIT that runs from the first week of January until the '
+        'end of the month.',
+ 'inst_name': 'Sarina Canelake',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'A Gentle Introduction to Programming Using Python',
+ 'url': 'https://ocw.mit.edu/courses/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/>
+{'des': 'This is a fast-paced introductory course to the C++ programming '
+        'language. It is intended for those with little programming '
+        'background, though prior programming experience will make it easier, '
+        'and those with previous experience will still learn C++-specific '
+        'constructs and concepts. This course is offered during the '
+        'Independent Activities Period (IAP), which is a special 4-week term '
+        'at MIT that runs from the first week of January until the end of the '
+        'month.',
+ 'inst_name': 'Jesse Dunietz',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'Introduction to C++',
+ 'url': 'https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2008/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/>
+{'des': 'This course introduces students to the basic knowledge '
+        'representation, problem solving, and learning methods of artificial '
+        'intelligence. Upon completion of 6.034, students should be able to '
+        'develop intelligent systems by assembling solutions to concrete '
+        'computational problems; understand the role of knowledge '
+        'representation, problem solving, and learning in intelligent-system '
+        'engineering; and appreciate the role of problem solving, vision, and '
+        'language in understanding human intelligence from a computational '
+        'perspective.',
+ 'inst_name': 'Patrick Henry Winston',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Artificial Intelligence',
+          'Theory of Computation',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Artificial Intelligence',
+          'Theory of Computation'],
+ 'title': 'Artificial Intelligence',
+ 'url': 'https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010/>
+{'des': 'This course is an introduction to software engineering, using the '
+        'Java™ programming language. It covers concepts useful to 6.005. '
+        'Students will learn the fundamentals of Java. The focus is on '
+        'developing high quality, working software that solves real problems. '
+        'The course is designed for students with some programming experience, '
+        'but if you have none and are motivated you will do fine. Students who '
+        'have taken 6.005 should not take this course. Each class is composed '
+        'of one hour of lecture and one hour of assisted lab work. This course '
+        'is offered during the Independent Activities Period (IAP), which is a '
+        'special 4-week term at MIT that runs from the first week of January '
+        'until the end of the month.',
+ 'inst_name': 'Evan Jones',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'Introduction to Programming in Java',
+ 'url': 'https://ocw.mit.edu/courses/6-092-introduction-to-programming-in-java-january-iap-2010/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-035-computer-language-engineering-spring-2010/>
+{'des': 'This course analyzes issues associated with the implementation of '
+        'higher-level programming languages. Topics covered include: '
+        'fundamental concepts, functions, and structures of compilers, the '
+        'interaction of theory and practice, and using tools in building '
+        'software. The course includes a multi-person project on compiler '
+        'design and implementation.',
+ 'inst_name': 'Prof. Saman Amarasinghe',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering',
+          'Engineering',
+          'Computer Science',
+          'Programming Languages',
+          'Software Design and Engineering'],
+ 'title': 'Computer Language Engineering',
+ 'url': 'https://ocw.mit.edu/courses/6-035-computer-language-engineering-spring-2010/'}
+2023-11-25 22:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2008/> (referer: None)
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/>
+{'des': 'This course is an introduction to the fundamentals of game theory and '
+        'mechanism design. Motivations are drawn from engineered/networked '
+        'systems (including distributed control of wireline and wireless '
+        'communication networks, incentive-compatible/dynamic resource '
+        'allocation, multi-agent systems, pricing and investment decisions in '
+        'the Internet), and social models (including social and economic '
+        'networks). The course emphasizes theoretical foundations, '
+        'mathematical tools, modeling, and equilibrium notions in different '
+        'environments.',
+ 'inst_name': 'Prof. Asuman Ozdaglar',
+ 'tags': ['Engineering',
+          'Mechanical Engineering',
+          'Social Science',
+          'Game Theory',
+          'Engineering',
+          'Mechanical Engineering',
+          'Social Science',
+          'Game Theory'],
+ 'title': 'Game Theory with Engineering Applications',
+ 'url': 'https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/>
+{'des': 'Distributed algorithms are algorithms designed to run on multiple '
+        'processors, without tight centralized control. In general, they are '
+        'harder to design and harder to understand than single-processor '
+        'sequential algorithms. Distributed algorithms are used in many '
+        'practical systems, ranging from large computer networks to '
+        'multiprocessor shared-memory systems. They also have a rich theory, '
+        'which forms the subject matter for this course. The core of the '
+        'material will consist of basic distributed algorithms and '
+        'impossibility results, as covered in Prof. Lynch’s book  . This will '
+        'be supplemented by some updated material on topics such as '
+        'self-stabilization, wait-free computability, and failure detectors, '
+        'and some new material on scalable shared-memory concurrent '
+        'programming.',
+ 'inst_name': 'Prof. Nancy Lynch',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation'],
+ 'title': 'Distributed Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/'}
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2008/>
+{'des': 'This is a graduate course on the design and analysis of algorithms, '
+        'covering several advanced topics not studied in typical introductory '
+        'courses on algorithms. It is especially designed for doctoral '
+        'students interested in theoretical computer science.',
+ 'inst_name': 'Prof. Michel Goemans',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation'],
+ 'title': 'Advanced Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2008/'}
+2023-11-25 22:27:23 [spider_MIT] WARNING: Item already in database: Introduction to Algorithms
+2023-11-25 22:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2008/>
+{'des': 'This course provides an introduction to mathematical modeling of '
+        'computational problems. It covers the common algorithms, algorithmic '
+        'paradigms, and data structures used to solve these problems. The '
+        'course emphasizes the relationship between algorithms and '
+        'programming, and introduces basic performance measures and analysis '
+        'techniques for these problems.',
+ 'inst_name': 'Prof. Erik Demaine',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Theory of Computation',
+          'Mathematics',
+          'Computation'],
+ 'title': 'Introduction to Algorithms',
+ 'url': 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2008/'}
+2023-11-25 22:28:22 [scrapy.extensions.logstats] INFO: Crawled 47 pages (at 47 pages/min), scraped 46 items (at 46 items/min)
+2023-11-25 22:29:22 [scrapy.extensions.logstats] INFO: Crawled 47 pages (at 0 pages/min), scraped 46 items (at 0 items/min)
+2023-11-25 22:29:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://ocw.mit.edu/courses/6-5060-algorithm-engineering-spring-2023/> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2023-11-25 22:29:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ocw.mit.edu/courses/6-5060-algorithm-engineering-spring-2023/> (referer: None)
+2023-11-25 22:29:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ocw.mit.edu/courses/6-5060-algorithm-engineering-spring-2023/>
+{'des': 'This is a research-oriented course on algorithm engineering, which '
+        'will cover both the theory and practice of algorithms and data '
+        'structures. Students will learn about models of computation, '
+        'algorithm design and analysis, and performance engineering of '
+        'algorithm implementations. We will study the design and '
+        'implementation of sequential, parallel, cache-efficient, '
+        'external-memory, and write-efficient algorithms for fundamental '
+        'problems in computing. Many of the principles of algorithm '
+        'engineering will be illustrated in the context of parallel algorithms '
+        'and graph problems.',
+ 'inst_name': 'Prof. Charles Leiserson',
+ 'tags': ['Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures',
+          'Engineering',
+          'Computer Science',
+          'Algorithms and Data Structures'],
+ 'title': 'Algorithm Engineering',
+ 'url': 'https://ocw.mit.edu/courses/6-5060-algorithm-engineering-spring-2023/'}
+2023-11-25 22:29:32 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-11-25 22:29:32 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TCPTimedOutError': 1,
+ 'downloader/request_bytes': 13215,
+ 'downloader/request_count': 49,
+ 'downloader/request_method_count/GET': 49,
+ 'downloader/response_bytes': 386937,
+ 'downloader/response_count': 48,
+ 'downloader/response_status_count/200': 48,
+ 'elapsed_time_seconds': 129.954502,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 11, 25, 16, 59, 32, 526443),
+ 'httpcompression/response_bytes': 2189062,
+ 'httpcompression/response_count': 47,
+ 'item_scraped_count': 47,
+ 'log_count/DEBUG': 96,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 3,
+ 'memusage/max': 85549056,
+ 'memusage/startup': 66936832,
+ 'response_received_count': 48,
+ 'retry/count': 1,
+ 'retry/reason_count/twisted.internet.error.TCPTimedOutError': 1,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 48,
+ 'scheduler/dequeued/memory': 48,
+ 'scheduler/enqueued': 48,
+ 'scheduler/enqueued/memory': 48,
+ 'start_time': datetime.datetime(2023, 11, 25, 16, 57, 22, 571941)}
+2023-11-25 22:29:32 [scrapy.core.engine] INFO: Spider closed (finished)
+

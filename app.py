@@ -132,7 +132,16 @@ def comp_science():
         conn = psycopg2.connect(**db_params)
         cursor = conn.cursor()
         
-        cursor.execute("SELECT * FROM course_description")  # WHERE keyword = %s", (selected_option,))
+        # cursor.execute("SELECT * FROM course_description")  # WHERE keyword = %s", (selected_option,))
+        # cursor.execute("SELECT * FROM course_description WHERE keywords::text ILIKE %s", ('%' + selected_option + '%',))
+        # cursor.execute("SELECT * FROM course_description WHERE keywords && %s", (selected_option,))
+        # cursor.execute("SELECT * FROM course_description WHERE %s = ANY(keywords)", (selected_option,))
+        # select * from testarr where names && '{"margaret","john"}';
+        # Use a parameterized query
+        query = "SELECT * FROM courses_mit WHERE tags && %s"
+        # Execute the query with the variable as a parameter
+        cursor.execute(query, ([selected_option],))
+        
         result = cursor.fetchall() 
 
         #result = data.get(selected_option, 'No data found')
@@ -140,7 +149,7 @@ def comp_science():
         conn.close()
 
         print(result)
-        print(result[0])
+        # print(result[0])
         
 
     return render_template('comp_science.html', result=result)
