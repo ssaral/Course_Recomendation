@@ -25,16 +25,20 @@ Welcome to Course Adviser, a web application designed to assist students in choo
 - Install Flask using the following command:
      ->pip install Flask
   
-- Install PostgreSQL and set up a database. Update the database configuration in the `config.py` file.
+- Install PostgreSQL and set up a database. Update the database configuration.
+    ```bash
    ->pip install psycopg2-binary
    ->sudo apt-get install libpq-dev
    ->pip install psycopg2
+    ```
   
 ### Installation
 
 1. Clone the repository:
 
+    ```bash
     git clone [https://github.com/ssaral/Course_Recomendation.git](https://github.com/ssaral/Course_Recomendation.git)
+    ```
 
 2. Navigate to the project directory:
 
@@ -60,10 +64,10 @@ Welcome to Course Adviser, a web application designed to assist students in choo
 
 6. Run the application:
     You can use anyone of the three ways below-
+   ```bash
    - python app.py
    - ./run.sh
-   - ```bash
-     flask run
+   - flask run
      ```
 
 8. Open your web browser and go to [http://localhost:5000](http://localhost:5000) to access the Course Adviser web application.
